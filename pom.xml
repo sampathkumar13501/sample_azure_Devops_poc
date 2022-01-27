@@ -31,14 +31,14 @@
 				<extensions>true</extensions>
 				<configuration>
 					<cloudHubDeployment>
-						<uri>${deploy_url}</uri>
+						<uri>${uri}</uri>
 						<server>${server}</server>
 						<muleVersion>${muleVersion}</muleVersion>
 						<appName>${appName}</appName>
 						<worker>${worker}</worker>
 						<workerType>${workerType}</workerType>
 						<environment>${environment}</environment>
-						<objectStoreV2>true</objectStoreV2>
+						<objectStore>true</objectStore>
 					</cloudHubDeployment>
 					<classifier>mule-application</classifier>
 				</configuration>
