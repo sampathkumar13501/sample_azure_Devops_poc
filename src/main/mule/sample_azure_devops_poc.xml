@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd">
+	<http:listener-config name="HTTP_Listener_config" doc:name="HTTP Listener config" doc:id="9220a00c-7320-4ec3-bdef-71f9962bcad5" >
+		<http:listener-connection host="0.0.0.0" port="8081" />
+	</http:listener-config>
+	<flow name="sample_azure_devops_pocFlow" doc:id="a67782d7-93dc-46e7-9c6c-33891249b2f5" >
+		<http:listener doc:name="Listener" doc:id="e8894aa5-5041-4703-812c-b9b504cd4cd3" config-ref="HTTP_Listener_config" path="/azure"/>
+		<set-payload value='#["sample azure devops flow"]' doc:name="Set Payload" doc:id="5f13d4e4-2cd4-4c94-83dd-50d9b1e65af4" />
+	</flow>
+</mule>
